@@ -45,6 +45,14 @@ const TaskSchema = new mongoose.Schema({
     type: [mongoose.Schema.Types.ObjectId], // Assuming user IDs
     required: true,
   },
+  isActive: {
+    type: Boolean,
+    required: true,
+  },
+  isCompleted: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 const TaskModel = mongoose.model("Task", TaskSchema);
