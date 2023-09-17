@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>Task Buddies</h1>
+        <h1>Task Together</h1>
         <Routes>
           <Route path="/" />
           <Route path="/tasks" element={<TaskList />} />

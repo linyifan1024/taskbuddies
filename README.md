@@ -1,6 +1,6 @@
-# Task Buddies
+# Task Together
 
-Task Buddies is a web application that allows users to create and participate in ephemeral tasks where participants need to check in daily. If a user fails to check in for a day, they will be automatically removed from the task.
+Task Together is a web application that allows users to create and participate in ephemeral tasks where participants need to check in daily. If a user fails to check in for a day, they will be automatically removed from the task.
 
 ## Features
 
@@ -18,7 +18,7 @@ Task Buddies is a web application that allows users to create and participate in
 
 ## Getting Started
 
-Follow these instructions to set up and run Task Buddies on your local machine.
+Follow these instructions to set up and run Task Together on your local machine.
 
 ### Prerequisites
 

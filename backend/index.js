@@ -2,10 +2,17 @@ const express = require("express");
 const app = express();
 const port = 5000;
 
+// mongodb
+const mongoose = require("mongoose");
+
+mongoose
+  .connect(url, { useNewUrlParser: true })
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log(err));
+
 app.get("/", (req, res) => {
   res.send("home page");
 });
-
 app.get("/tasks", (req, res) => {
   res.send("tasks page");
 });
