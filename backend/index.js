@@ -4,6 +4,10 @@ const port = 5000;
 
 // mongodb
 const mongoose = require("mongoose");
+const TaskModel = require("./models.js/Task");
+const UserModel = require("./models.js/User");
+// const MongoClient = require("mongodb").MongoClient;
+const url = "mongodb://127.0.0.1:27017/task-together";
 
 mongoose
   .connect(url, { useNewUrlParser: true })
