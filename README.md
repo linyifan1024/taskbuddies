@@ -9,7 +9,7 @@ cd task-buddies: `npm start`
 
 backend:
 
-[] 1. connect to frontend using axios
+1. connect to frontend using axios
 
 database:
 
