@@ -2,6 +2,15 @@
 
 task sharing plan
 
+to run:
+in two terminals run `npm i`
+cd backend: `nodemon index.js`
+cd task-buddies: `npm start`
+
+backend:
+
+1. connect to frontend
+
 database:
 
 1. create ephermeral task
