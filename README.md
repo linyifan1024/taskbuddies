@@ -42,15 +42,9 @@ Follow these instructions to set up and run Squad Task on your local machine.
 
 ### Configuration
 
-1. Create a `.env` file in the project root and configure your environment variables:
 
-   PORT=3000
-   MONGODB_URI=mongodb://localhost/Task-buddies
+1. Run the application:
 
-   Adjust the values as needed for your local setup.
+   npm start, mongod --dbpath ./mongodb-data, nodemon index.js
 
-2. Run the application:
-
-   npm start
-
-3. Open your web browser and access the application at http://localhost:3000.
+2. Open your web browser and access the application at http://localhost:3000.
