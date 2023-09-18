@@ -13,10 +13,10 @@ const UserSchema = new mongoose.Schema({
     trim: true,
   },
   joinedTasks: {
-    type: [mongoose.Schema.Types.ObjectId], // Assuming it's an array of task IDs
+    type: [mongoose.Schema.Types.ObjectId], // Assuming it's an array of Task IDs
   },
   currentTaskId: {
-    type: mongoose.Schema.Types.ObjectId, // Assuming it's a single task ID
+    type: mongoose.Schema.Types.ObjectId, // Assuming it's a single Task ID
   },
 });
 

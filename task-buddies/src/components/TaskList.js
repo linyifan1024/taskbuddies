@@ -1,52 +1,41 @@
-const tasks = [
-  {
-    id: 1,
-    name: "Task 1",
-    description: "This is task 1",
-    length: 7,
-    days: {
-      day1: "complete by user 1, 2",
-      day2: "",
-    },
-    members: [{ username: "user1" }, { username: "user2" }],
-    status: "incomplete",
-    dueDate: "2021-10-01",
-  },
-  {
-    id: 2,
-    name: "Task 2",
-    description: "This is task 2",
-    members: [
-      { username: "user1" },
-      { username: "user2" },
-      { username: "user3" },
-    ],
-    status: "incomplete",
-    dueDate: "2021-10-02",
-  },
-];
-function TaskList() {
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Card from "react-bootstrap/Card";
+import Button from "react-bootstrap/esm/Button";
+import "../App.css";
+import { Link } from "react-router-dom";
+const TaskList = () => {
+  const [Tasks, setTasks] = useState([]);
+  useEffect(() => {
+    // Make a GET request to fetch Tasks from your backend API
+    const fetchTasks = async () => {
+      const response = await axios.get("http://localhost:5000/tasks");
+      console.log(response.data);
+      setTasks(response.data);
+    };
+    fetchTasks();
+  }, []);
   return (
-    <div>
-      <h2>Task List</h2>
-      <ul>
-        {tasks.map((task) => (
-          <li key={task.id}>
-            <h3>{task.name}</h3>
-            <p>Description: {task.description}</p>
-            <p>Status: {task.status}</p>
-            <p>Due Date: {task.dueDate}</p>
-            <p>Members:</p>
-            <ul>
-              {task.members.map((member, index) => (
-                <li key={index}>{member.username}</li>
+    <div className="Task-list text-container">
+      {Tasks.map((Task) => (
+        <Card key={Task._id} className="Task-card">
+          <Card.Body>
+            <Card.Title>
+              <Link to={`/Tasks/${Task._id}`}>{Task.Name}</Link>
+            </Card.Title>
+            <Card.Text>{Task.Description}</Card.Text>
+            <Card.Text>
+              Members:
+              {Task.ActiveMembers.map((member) => (
+                <li key={member}>{member}</li>
               ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+            </Card.Text>
+            <Button variant="primary">Join</Button>
+          </Card.Body>
+        </Card>
+      ))}
     </div>
   );
-}
+};
 
 export default TaskList;

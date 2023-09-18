@@ -1,6 +1,14 @@
 /* homepage.css */
 
 /* Header styles */
+.body {
+  display: flex;
+  flex-direction: row; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Make sure it covers the entire viewport height */
+  background-image: url("../public/cool-background.png");
+}
 .App-header {
   text-align: center;
   padding: 2rem;
@@ -29,4 +37,26 @@ p {
   background-color: #0056b3;
 }
 
-/* Add more CSS rules for other sections and elements */
+.text-container {
+  background-color: #f0f0f0; /* Background color */
+  color: #666; /* Text color */
+  border-radius: 20px; /* Adjust the border-radius to control the roundness */
+  padding: 10px 20px; /* Adjust the padding as needed */
+  display: inline-block; /* Make the container inline so it wraps around the text */
+}
+
+.Task-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("../public/cool-background.png");
+}
+
+.Task-card {
+  width: 250px; /* Set a fixed width for each card */
+  height: 300px; /* Set a fixed height for each card */
+  margin: 10px;
+  /* Add any other styling as needed */
+}

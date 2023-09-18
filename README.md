@@ -1,24 +1,24 @@
-# Task Together
+# Squad Task
 
-Task Together is a web application that allows users to create and participate in ephemeral tasks where participants need to check in daily. If a user fails to check in for a day, they will be automatically removed from the task.
+Squad Task is a web application that allows users to create and participate in ephemeral Tasks where participants need to check in daily. If a user fails to check in for a day, they will be automatically removed from the Task.
 
 ## Features
 
-- **Task Creation**: Users can create ephemeral tasks, specifying the task's name, description, start date, end date, and daily actions required.
+- **Task Creation**: Users can create ephemeral Tasks, specifying the Task's name, description, start date, end date, and daily actions required.
 
-- **User Management**: Users can register, and registered users can join tasks. Each user can only participate in one task at a time.
+- **User Management**: Users can register, and registered users can join Tasks. Each user can only participate in one Task at a time.
 
-- **Daily Check-Ins**: Users are required to post daily check-ins for the task. If a user fails to check in for a day, they will be marked as "not checked in."
+- **Daily Check-Ins**: Users are required to post daily check-ins for the Task. If a user fails to check in for a day, they will be marked as "not checked in."
 
-- **Automatic Kick-Out**: Users who do not check in for a day will be automatically kicked out of the task. This applies to the task owner as well.
+- **Automatic Kick-Out**: Users who do not check in for a day will be automatically kicked out of the Task. This applies to the Task owner as well.
 
-- **Task Completion**: Users can complete tasks successfully by checking in daily until the end date.
+- **Task Completion**: Users can complete Tasks successfully by checking in daily until the end date.
 
-- **Task Expiration**: If a task has no active members left (everyone was kicked out), it will be automatically deactivated or deleted.
+- **Task Expiration**: If a Task has no active members left (everyone was kicked out), it will be automatically deactivated or deleted.
 
 ## Getting Started
 
-Follow these instructions to set up and run Task Together on your local machine.
+Follow these instructions to set up and run Squad Task on your local machine.
 
 ### Prerequisites
 
@@ -30,11 +30,11 @@ Follow these instructions to set up and run Task Together on your local machine.
 
 1. Clone the repository (or download the ZIP file and extract it):
 
-   git clone https://github.com/yourusername/task-buddies.git
+   git clone https://github.com/yourusername/Task-buddies.git
 
 2. Navigate to the project directory:
 
-   cd task-buddies
+   cd Task-buddies
 
 3. Install the project dependencies:
 
@@ -45,7 +45,7 @@ Follow these instructions to set up and run Task Together on your local machine.
 1. Create a `.env` file in the project root and configure your environment variables:
 
    PORT=3000
-   MONGODB_URI=mongodb://localhost/task-buddies
+   MONGODB_URI=mongodb://localhost/Task-buddies
 
    Adjust the values as needed for your local setup.
 

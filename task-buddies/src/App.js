@@ -3,23 +3,25 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import TaskList from "./components/TaskList";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-
+import HomePage from "./pages/HomePage";
+import CreateTaskPage from "./pages/CreateTaskPage";
+import TaskDetailPage from "./pages/TaskDetailPage";
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <h1>Task Together</h1>
-        <Routes>
-          <Route path="/" />
-          <Route path="/tasks" element={<TaskList />} />
-          <Route path="/tasks/create" element={<h1>Create Task</h1>} />
-          <Route path="/tasks/:id" element={<h1>Task Detail</h1>} />
-          <Route path="/tasks/:id/members" element={<h1>Task Members</h1>} />
-        </Routes>
         <NavBar />
+        <div className="body">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/tasks" element={<TaskList />} />
+            <Route path="/tasks/create" element={<CreateTaskPage />} />
+            <Route path="/tasks/:id" element={<TaskDetailPage />} />
+            <Route path="/tasks/:id/members" element={<h1>Task Members</h1>} />
+            <Route path="/mytasks" element={<h1>My Tasks</h1>} />
+          </Routes>
+        </div>
       </div>
-      <Home />
     </BrowserRouter>
   );
 }
