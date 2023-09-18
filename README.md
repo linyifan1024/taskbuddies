@@ -1,4 +1,4 @@
-# Squad Task
+# Squad Goals (not sure about the name yet)
 
 Squad Task is a web application that allows users to create and participate in ephemeral Tasks where participants need to check in daily. If a user fails to check in for a day, they will be automatically removed from the Task.
 
